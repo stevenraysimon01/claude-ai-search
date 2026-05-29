@@ -1,0 +1,133 @@
+/* =========================================================
+   Claude AI Search — shared styles (editor + frontend)
+   ========================================================= */
+
+.claude-ai-search-widget {
+    font-family: inherit;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* --- Input row --- */
+.cas-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.cas-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fff;
+    color: #111;
+}
+
+.cas-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.cas-button {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+.cas-button:hover:not(:disabled) {
+    background: #4f46e5;
+}
+
+.cas-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* --- Answer box --- */
+.cas-answer {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1e293b;
+}
+
+.cas-answer-text {
+    white-space: pre-wrap;
+}
+
+.cas-loading {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.cas-error {
+    color: #dc2626;
+}
+
+/* --- Sources --- */
+.cas-sources {
+    margin-top: 12px;
+}
+
+.cas-sources-label {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cas-sources-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.cas-sources-list li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.cas-sources-list a {
+    color: #6366f1;
+    text-decoration: underline;
+}
+
+.cas-sources-list a:hover {
+    color: #4f46e5;
+}
+
+/* --- Editor preview note --- */
+.cas-editor-note {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+}
+
+/* --- Responsive --- */
+@media ( max-width: 480px ) {
+    .cas-input-row {
+        flex-direction: column;
+    }
+    .cas-button {
+        width: 100%;
+    }
+}
